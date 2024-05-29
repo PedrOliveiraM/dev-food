@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles/output.css" />
     <title>Cardápio Online</title>
   </head>
@@ -28,12 +35,14 @@
     </h2>
     <!-- Inicio do Menu -->
     <div id="menu">
-      <main>
-        <!-- Produto Item-->
-        <div class="flex">
+      <main
+        class="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-7 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!-- INICIO produto Item -->
+        <div class="flex gap-2">
           <img
             class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
-            src="assets/hamb-2.png"
+            src="assets/hamb-3.png"
             alt="hamburguer smash"
           />
           <div>
@@ -42,15 +51,166 @@
               Pão levinho de fermentação natural da Trigou, burger 160g, queijo
               prato e maionese da casa
             </p>
-            <div class="flex font-bold justify-between">
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
+              <span>R$ 25,00</span>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Hamburguer Smash"
+                data-price="25.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM Produto Item-->
+
+        <!-- INICIO produto Item -->
+        <div class="flex gap-2">
+          <img
+            class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
+            src="assets/hamb-2.png"
+            alt="hamburguer smash"
+          />
+          <div>
+            <p class="font-bold text-lg">Hamburguer Big Smash</p>
+            <p>
+              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
+              prato e maionese da casa
+            </p>
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
               <span>R$ 35,00</span>
-              <button>Compre aki</button>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Hamburguer Big Smash"
+                data-price="35.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM Produto Item-->
+
+        <!-- INICIO produto Item -->
+        <div class="flex gap-2">
+          <img
+            class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
+            src="assets/hamb-4.png"
+            alt="hamburguer smash"
+          />
+          <div>
+            <p class="font-bold text-lg">Hamburguer Da Casa</p>
+            <p>
+              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
+              prato e maionese da casa
+            </p>
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
+              <span>R$ 26,00</span>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Hamburguer Da Casa"
+                data-price="26,00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM Produto Item-->
+
+        <!-- INICIO produto Item -->
+        <div class="flex gap-2">
+          <img
+            class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
+            src="assets/hamb-5.png"
+            alt="hamburguer smash"
+          />
+          <div>
+            <p class="font-bold text-lg">Hamburguer Super House</p>
+            <p>
+              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
+              prato e maionese da casa
+            </p>
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
+              <span>R$ 40,00</span>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Hamburguer Super House"
+                data-price="35.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
             </div>
           </div>
         </div>
         <!-- FIM Produto Item-->
       </main>
+
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-2xl md:text-3xl mb-6">Bebidas</h2>
+      </div>
+
+      <!-- INICIO GRID BEBIDAS -->
+      <div
+        id="menu-bebidas"
+        class="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-7 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!-- INICIO BEBIDAS ITEM -->
+        <div class="flex gap-2 w-full">
+          <img
+            class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
+            src="assets/refri-1.png"
+            alt="Refrigerante Coca Cola"
+          />
+          <div class="w-full">
+            <p class="font-bold text-lg">Coca Cola</p>
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
+              <span>R$ 6,00</span>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Refrigerante Coca Cola"
+                data-price="6,00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM BEBIDAS ITEM -->
+
+        <!-- INICIO BEBIDAS ITEM -->
+        <div class="flex gap-2 w-full">
+          <img
+            class="rounded-md w-36 h-36 hover:scale-110 hover:-rotate-2 duration-300"
+            src="assets/refri-2.png"
+            alt="Refrigerante Guaraná"
+          />
+          <div class="w-full">
+            <p class="font-bold text-lg">Guaraná</p>
+            <div class="flex items-center font-bold justify-between mt-3 gap-2">
+              <span>R$ 6,00</span>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
+                data-name="Refrigerante Guaraná"
+                data-price="6,00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer></footer>
+    <!-- FIM BEBIDAS ITEM -->
+
+    <footer class=" w-full fixed bottom-0 z-40 py-3 bg-red-500 text-white flex items-center justify-center">
+      <button  id="cart-btn" class="flex items-center gap-2 text-white font-bold">
+        (<span id="cart-count">2</span>)
+        Veja seu carrinho</p>
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>
+
   </body>
 </html>
