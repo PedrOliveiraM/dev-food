@@ -59,7 +59,7 @@ nameInput.addEventListener('input', (e) => {
 // verificando campo do endereço e emitindo alerta
 // botao checkout
 checkoutBtn.addEventListener('click', () => {
-  if (checkRestaurantOpen()) {
+  if (!checkRestaurantOpen()) {
     Toastify({
       text: 'Opss! O restaurante está fechado! 🕒🔒',
       duration: 3000,
