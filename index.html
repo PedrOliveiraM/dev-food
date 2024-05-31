@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="assets/ico.svg" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -17,6 +30,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles/output.css" />
+    <script src="script.js" defer></script>
     <title>Cardápio Online</title>
   </head>
   <body>
@@ -32,7 +46,7 @@
           >Rua das Coves, 12, Correntina, BA</span
         >
         <div class="bg-green-600 px-4 py-1 mt-4 rounded-lg" id="date-span">
-          <span class="text-white font-medium"> Seg á Dom - 18h as 22:00</span>
+          <span class="text-white font-medium"> Seg á Dom - 18h as 23:00</span>
         </div>
       </div>
     </header>
@@ -139,11 +153,11 @@
               prato e maionese da casa
             </p>
             <div class="flex items-center font-bold justify-between mt-3 gap-2">
-              <span>R$ 40,00</span>
+              <span>R$ 39,90</span>
               <button
                 class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 duration-300"
                 data-name="Hamburguer Super House"
-                data-price="35.00"
+                data-price="39.0"
               >
                 <i class="fa fa-cart-plus text-lg text-white"></i>
               </button>
@@ -212,7 +226,8 @@
 
     <!-- INICIO MODAL CARRINHO -->
     <div
-      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] flex justify-center items-center hidden"
+      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] justify-center items-center hidden"
+      id="cart-modal"
     >
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center font-bold text-2xl md:text-3xl mb-2">
@@ -223,12 +238,21 @@
 
         <p class="font-bold">Total: <span id="card-total">0.00</span></p>
 
+        <p class="font-bold mt-4">Nome:</p>
+        <input
+          type="text"
+          class="w-full p-2 border rounded-md my-1"
+          placeholder="Digite seu Nome"
+          id="name-input"
+        />
+        <p class="text-red-500 hidden" id="name-warn">Digite seu Nome !</p>
+
         <p class="font-bold mt-4">Endereço de entrega:</p>
         <input
           type="text"
-          class="w-full p-2 border border-gray-300 rounded-md my-1"
+          class="w-full p-2 border rounded-md my-1"
           placeholder="Digite seu endereço completo"
-          id="address"
+          id="address-input"
         />
         <p class="text-red-500 hidden" id="address-warn">
           Digite seu Endereço Completo !
@@ -251,11 +275,11 @@
     >
       <button
         id="cart-btn"
-        class="flex items-center gap-2 text-white font-bold"
+        class="flex items-center gap-3 text-white font-bold"
       >
         (<span id="cart-count">0</span>)
         <p>Veja seu carrinho</p>
-        <i class="fa fa-cart-plus text-lg text-white"></i>
+        <i class="fa-solid fa-bag-shopping text-xl text-white"></i>
       </button>
     </footer>
   </body>
