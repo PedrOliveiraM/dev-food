@@ -126,7 +126,7 @@ checkoutBtn.addEventListener('click', () => {
 function checkRestaurantOpen() {
   const date = new Date();
   const hour = date.getHours();
-  return hour >= 20 && hour <= 23;
+  return hour >= 15 && hour <= 23;
 }
 
 // botao item e mostrando no modal
