@@ -1,6 +1,3 @@
-Aqui está a versão atualizada do README para o seu projeto "dev-food":
-
----
 
 # Projeto Dev-Food ![Em Andamento](https://img.shields.io/badge/status-em%20andamento-yellow)
 
